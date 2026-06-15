@@ -1,0 +1,434 @@
+```html
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sok Zelene</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Ribeye&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --green:#2e7d32;
+    --green-light:#4caf50;
+    --bg:#f8faf8;
+    --text:#1f2937;
+    --card:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    backdrop-filter:blur(12px);
+    background:rgba(11, 28, 0, 0.87);
+    border-bottom:1px solid rgba(0,0,0,0.05);
+    z-index:100;
+}
+
+.nav-container{
+    width:100%;
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:15px 40px;
+}
+
+.floating-logo{
+    position:fixed;
+    top:200px;
+    left:40px;
+    z-index:50;
+}
+
+.floating-logo img{
+    height:250px;
+    width:auto;
+ border-radius:50%;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#ffffff;
+    font-weight:500;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:100px 20px 40px;
+
+    background:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.55)
+    ),
+    url("https://storage.googleapis.com/gen-atmedia/3/2014/10/1c340c24e50e2a71609db0d2c0d77849b36ba2b4.jpeg");
+    background-size:cover;
+    background-position:center;
+margin-top:50PX;
+
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.hero h1{
+    font-family: 'Ribeye', cursive;
+font-size:clamp(3rem,7vw,5rem);
+    color:#ffffff;
+    margin-bottom:1px;
+    font-weight:700;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+    line-height: 1.1;
+white-space: normal;
+
+}
+
+.hero h1:last-of-type{
+    margin-bottom:60px;
+}
+.hero-subtitle{
+font-family: 'Autour One', cursive;
+    margin-top:70px;
+    margin-bottom:40px;
+    font-size:1.2rem;
+    color:white;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:var(--green);
+    color:white;
+    text-decoration:none;
+    border-radius:999px;
+    transition:.3s;
+    margin-top: 100px;
+font-family: 'Autour One', cursive;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    background:var(--green-light);
+}
+
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:50px;
+    color:var(--green);
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.card{
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.feature{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.feature span{
+    font-size:2rem;
+}
+
+.cloud-banner{
+    width:100%;
+    margin-bottom:175px;
+}
+
+.cloud-banner .section-title{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    background:rgba(76,175,80,0.4);
+    padding:50px;
+    border-radius:30px;
+
+}
+
+#cena {
+    scroll-margin-top: 100px;
+}
+
+.price{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:50px;
+}
+
+.price-image img{
+    width:600px;
+    height:auto;
+    border-radius:20px;
+    object-fit:cover;
+}
+
+.price-info{
+    text-align:left;
+}
+
+.price-info h3{
+    font-size:3rem;
+    color:var(--green);}
+
+.details ul{
+    list-style:none;
+}
+
+.details li{
+    margin-bottom:15px;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#666;
+}
+
+@media(max-width:768px){
+
+.about{
+    grid-template-columns:1fr;
+}
+
+.nav-links{
+    display:none;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="nav-container">
+
+    <div class="nav-links">
+        <a href="#izdelek">Izdelek</a>
+        <a href="#prednosti">Prednosti</a>
+        <a href="#cena">Cena</a>
+        <a href="#kontakt">Kontakt</a>
+    </div>
+
+</div>
+
+</nav>
+
+<div class="floating-logo">
+    <img src="logo.png" alt="Svet Zelene">
+</div>
+<section class="hero">
+<div class="hero-content">
+<h1>SVEŽE STISNJEN</h1>
+<h1>SOK ZELENE</h1>
+
+<p class="hero-subtitle">
+    100%<br>
+    ČISTA. LOKALNA. POPOLNA PRILOŽNOST.
+</p>
+
+<a href="#cena" class="btn">DO IZDELKA</a>
+</div>
+</section>
+
+<section id="izdelek">
+<h2 class="section-title">Izdelek</h2>
+
+
+<div class="about">
+
+<div class="card">
+<h3>Svež</h3>
+<p>
+Sok stiskam dvakrat tedensko, ob torkih in petkih.
+Na ta način zagotovim kar največjo svežino in kakovost izdelka.
+</p>
+</div>
+
+<div class="card">
+<h3>Premišljen</h3>
+<p>
+Izdelek lahko uživate brez skrbi da bi vase vnašali kemikalije, vse je premišljeno in brez rizike.
+</p>
+</div>
+
+
+<div class="card">
+<h3>Naraven</h3>
+<p>
+V sok ne dodajam ničesar razen zelene.
+Brez konzervansov, umetnih dodatkov ali dodanega sladkorja.
+</p>
+</div>
+
+<div class="card">
+<h3>Smiseln</h3>
+
+<p>
+Če se v kaj splača investirati je to zdravje, saj na koncu je edino to pomembno.
+</p>
+</div>
+
+</section>
+
+<div class="cloud-banner">
+    <p class="section-title">
+        ODLIČNA PRILOŽNOST ZA PONASTAVITEV<br> PREHRANJEVALNIH NAVAD
+IN ZAČETEK<br> POTI K BOLJŠEMU NAČINU ŽIVLJENJA.
+    </p>
+
+
+</div>
+</section>
+
+<section id="cena">
+
+<div class="price">
+
+    <div class="price-image">
+        <img src="cena.png">
+    </div>
+
+    <div class="price-info">
+        <h3>4,50 €</h3>
+        <p>0,5 L sveže stisnjenega soka zelene</p>
+        <br>
+        <p>Po želji dodatek limone ali jabolka</p>
+    </div>
+
+</section>
+
+<section id="prednosti">
+<h2 class="section-title"></h2>
+
+<div class="features">
+
+<div class="feature">
+<span>🌱</span>
+<h3>Lokalna pridelava</h3>
+<p>Zelena prihaja iz lokalne kmetije.</p>
+</div>
+
+<div class="feature">
+<span>🫙</span>
+<h3>Steklena embalaža</h3>
+<p>Manj odpadkov in možnost ponovne uporabe.</p>
+</div>
+
+<div class="feature">
+<span>🛵</span>
+<h3>Dostava</h3>
+<p>Dostava v okolici Ljubljane pri naročilih nad 20 €.</p>
+</div>
+
+<div class="feature">
+<span>❄️</span>
+<h3>Hladno stiskanje</h3>
+<p>Pripravljeno s sokovnikom Greenstar.</p>
+</div>
+
+</div>
+
+</section>
+<section id="podrobnosti" class="details">
+
+<h2 class="section-title">Podrobnosti</h2>
+
+<div class="card">
+<ul>
+<li>✓ Rok uporabe približno 4 dni.</li>
+<li>✓ Kavcija za steklenico: 1,50 €.</li>
+<li>✓ Ob vračilu steklenice se kavcija povrne.</li>
+<li>✓ Steklenice čistim z vročo vodo in alkoholnim kisom.</li>
+<li>✓ Na voljo ob torkih in petkih.</li>
+</ul>
+</div>
+
+</section>
+
+<section id="kontakt">
+<h2 class="section-title">Kontakt</h2>
+
+<div class="card" style="text-align:center;">
+<p><strong>Ime in Priimek</strong></p>
+<p>Telefon: 041 XXX XXX</p>
+<p>Email: tvoj@email.com</p>
+</div>
+
+</section>
+
+<footer>
+🌿 Šolski projekt – Sok Zelene
+</footer>
+
+</body>
+</html>
+```
