@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Autour+One&family=Ribeye&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Autour+One&family=Ribeye&display=swap" rel="stylesheet">
 
 <style>
 
@@ -31,8 +31,18 @@ html{
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-    background:var(--bg);
+    font-family: 'Poppins', sans-serif;
+
+ background: linear-gradient(
+    to bottom,
+    #ffffff 200px,
+    #faf7f0 700px,
+    #e8eadb 1400px,
+    #e8eadb 2300px,
+    #f5f1e8 3500px,
+    #e1e8d8 5000px
+);
+
     color:var(--text);
     line-height:1.7;
 }
@@ -50,26 +60,142 @@ nav{
 .nav-container{
     width:100%;
     display:flex;
-    justify-content:flex-end;
+    justify-content:space-between;
     align-items:center;
     padding:15px 40px;
 }
 
-.product-logo{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.product-logo img{
-    width:130px;
-    height:130px;
-    object-fit:cover;
-    border-radius:50%;
+.nav-title{
+    color:white;
+    font-family:'Ribeye', cursive;
+    font-size:1.4rem;
+    letter-spacing:1px;
 }
 
 .nav-links{
     display:flex;
     gap:25px;
+}
+
+.logo{
+    text-align:center;
+    margin-bottom:120px;
+margin-top:115px;
+}
+
+.logo img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+#faq{
+    background:#1f3a1f;
+    padding:90px 40px;
+    border-radius:35px;
+    margin:100px auto;
+}
+
+#faq .section-title{
+    color:white;
+}
+
+.faq-item{
+    background:transparent;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    padding:25px 0;
+}
+
+.faq-item summary{
+    color:white;
+    font-size:1.2rem;
+    font-weight:600;
+    cursor:pointer;
+    list-style:none;
+}
+
+.faq-item p{
+    color:rgba(255,255,255,.8);
+    margin-top:15px;
+    line-height:1.8;
+}
+
+.faq-item summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-item summary::after{
+    content:"+";
+    float:right;
+    font-size:1.6rem;
+}
+
+.faq-item[open] summary::after{
+    content:"−";
+}
+
+#Opis .section-title{
+    margin-top:70px;
+ font-family:'Ribeye', cursive;
+}
+
+#podrobnosti .section-title{
+    font-family:'Autour One', cursive;
+}
+
+.feature h3{
+    font-family:'Autour One', cursive;
+font-size:1rem;
+}
+
+.details-content ul{
+    list-style:none;
+    padding-left:0;
+}
+
+.mobile-info{
+    text-align:center;
+    margin-top:45px;
+    padding:0 25px;
+}
+
+.mobile-info p{
+font-family:'Autour One', cursive;
+    color:#3f523d;
+    font-size:1rem;
+    line-height:1;
+    margin-bottom:16px;
+}
+
+.mobile-info h3{
+    font-family:'Autour One', cursive;
+    font-size:2.5rem;
+    color:#2d4529;
+    font-weight:400;
+    line-height:1.3;
+    margin-bottom:18px;
+}
+
+@media (max-width:768px){
+
+.logo-desktop{
+        display:none;
+    }
+
+    .logo-mobile{
+        display:block;
+    }
+
+    .nav-title{
+        display:none;
+    }    
+
+.logo-mobile{
+        display:block;
+        text-align:center;
+        margin-bottom:50px;
+    }
 
 }
 
@@ -77,6 +203,10 @@ nav{
     text-decoration:none;
     color:#ffffff;
     font-weight:500;
+ font-family:'Ribeye', cursive;
+    font-size:1rem;
+    font-weight:500;
+    color:#ffffff;
 }
 
 /* HERO */
@@ -86,17 +216,16 @@ nav{
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:80px 20px 40px;
+    padding:100px 20px 40px;
 
     background:
     linear-gradient(
       rgba(0,0,0,0.55),
       rgba(0,0,0,0.55)
     ),
-    url("https://storage.googleapis.com/gen-atmedia/3/2014/10/1c340c24e50e2a71609db0d2c0d77849b36ba2b4.jpeg");
+    url("ozadje.jpeg");
     background-size:cover;
     background-position:center;
-margin-top:50PX;
 
 }
 
@@ -106,6 +235,7 @@ margin-top:50PX;
     display: flex;
     flex-direction: column;
     gap: 50px;
+transform: translateY(-60px);
 }
 .hero h1{
     font-family: 'Ribeye', cursive;
@@ -146,32 +276,111 @@ font-family: 'Autour One', cursive;
 .btn:hover{
     transform:translateY(-2px);
     background:var(--green-light);
+
+}.nav-links a,
+.nav-links a:visited,
+.nav-links a:hover,
+.nav-links a:active{
+    color:#ffffff;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+#podrobnosti .section-title{
+        margin-top:190px;
+    }
+
+}
+
+#faq{
+    scroll-margin-top:150px;
+}
+
+  .mobile-sok{
+    display:block;
+    text-align:center;
+    margin:10px 0 40px;   
+}
+
+.about,
+.features{
+    width:92%;
+    margin:0 auto;
+}
+
+.mobile-sok img{
+    width:300px;         
+    max-width:90%;        
+    height:auto;
+    border-radius:30px;
+    display:block;
+    margin:auto;
+}
+
+    .details-image{
+        display:none;
+    }
+
+.mobile-title{
+    display:block;
+    text-align:center;
+    font-family:'Autour One', cursive;
+    font-size:1.5rem;
+    color:#2d4529;
+    margin:200px 0 30px;
+}
+
+.desktop-title{
+    display:none;
+}
+
 }
 
 section{
-    max-width:1100px;
     margin:auto;
-    padding:60px 20px;
+    padding:30px 20px;
+    max-width:100%;
+}
+
+.logo-mobile img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
 }
 
 .section-title{
     text-align:center;
     font-size:2.2rem;
     margin-bottom:50px;
-    color:var(--green);
+    color:#2d4529;
 }
 
 .about{
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:40px;
+    grid-template-columns:repeat(2, 1fr);
+    gap:12px;
 }
 
 .card{
-    background:var(--card);
-    padding:30px;
-    border-radius:20px;
+    background: #e9f0e9;
+   padding:25px 20px;
+    border-radius:22px;
+text-align:center;
+
     box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card h3{
+    font-family:'Ribeye', cursive;
+    text-align:center;
+    color:#2d4529;
+    font-size:1.2rem;
+    margin-bottom:20px;
+}
+
+.details-image{
+    display:none;
 }
 
 .features{
@@ -193,23 +402,22 @@ section{
 }
 
 .cloud-banner{
-    width:100%;
-    margin-bottom:175px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:visible;
 }
-
-.cloud-banner .section-title{
-    width:100%;
-    max-width:1200px;
-    margin:auto;
-    background:rgba(76,175,80,0.4);
-     padding:30px 20px;
-    border-radius:30px;
- font-size:1.4rem;
-
-}
+    .cloud-banner img{
+        width:100%;
+        max-width:100%;
+ transform: translateX(-10px);
+margin-top:60px;
+margin-bottom:-15px;
+    }
 
 #cena {
-    scroll-margin-top: 100px;
+    scroll-margin-top: -270px;
+padding-bottom:10px;
 }
 
 .price{
@@ -226,21 +434,207 @@ flex-direction:column;
     height:auto;
     border-radius:20px;
     object-fit:cover;
+margin-top:50px;
+
 }
 
-.price-info{
-    text-align:center;
+.price-info p{
+    color:#2f3f2d !important;
+    font-weight:700 !important;
+    font-size:1.2rem;
+    line-height:1.7;
+text-align:center;
+}
+
+.green-text{
+    color:#587d54;
+}
+
+.small-note{
+    font-size:0.9rem;
+    font-weight:300;
+    color:#8d9788;
+    opacity:0.65;
 }
 
 .price-info h3{
-    font-size:3rem;
-    color:var(--green);}
+    font-size:3.5rem;
+    color:#277320;
+    text-shadow:0 2px 12px rgba(39,115,32,0.15);
+text-align:center;
+margin-bottom:50px;
+
+}
+@media(min-width:769px){
+
+#cena{
+    scroll-margin-top: -600px;
+}
+
+#faq{
+    scroll-margin-top:150px;
+}
+
+.mobile-sok{
+    display:none;
+}
+
+section{
+    max-width:1200px;
+    margin:auto;
+    padding:100px 60px;
+}
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+}
+
+.mobile-title{
+    display:none;
+}
+
+.desktop-title{
+    display:block;
+    font-family:'Autour One', cursive;
+    font-size:1.6rem;
+    color:#2d4529;
+    margin-bottom:20px;
+}
+
+.card{
+    background: #e9f0e9;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.card h3{
+    font-family:'Ribeye', cursive;
+    text-align:center;
+    color:#2d4529;
+    font-size:1.6rem;
+    margin-bottom:20px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.feature{
+    background:#eff0ed;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.05);
+}
+
+.feature span{
+    font-size:2rem;
+}
+
+
+.cloud-banner{
+    width:82%;
+    height:500px;
+
+    background:transparent;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:30px;
+margin:140px auto 50px auto;
+    overflow:hidden;
+}
+
+#cena{
+    margin-top:-140px;
+margin-bottom: 200px;
+}
+
+.cloud-banner img{
+    width:120%;
+    max-width:1600px;
+    height:auto;
+ margin:0 auto;
+}
+
+.price{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+}
+
+.price-image img{
+    width:100%;
+    max-width:600px;
+    height:auto;
+    border-radius:20px;
+    object-fit:cover;
+}
+
+.price-info p{
+    color:#2f3f2d !important;
+    font-weight:700 !important;
+    font-size:1.2rem;
+    line-height:1.7;
+text-align:center;
+
+}
+
+.price-info h3{
+    font-size:3.5rem;
+    color:#277320;
+    text-shadow:0 2px 12px rgba(39,115,32,0.15);
+text-align:center;
+margin-bottom:50px;
+
+}
+
+.details-content{
+ margin-top:90px;
+    display:grid;
+    grid-template-columns:1fr 0.8fr;
+    gap:60px;
+justify-content:space-between;
+    align-items:center;
+}
+
+.details-image{
+    display:block;
+}
+
+.details-image img{
+    width:70%;
+    border-radius:25px;
+    object-fit:cover;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+ margin-left:55px;
+}
+
+.details .card{
+    background:#eff0ed;
+}
+
+.green-text{
+    color:#587d54;
+}
 
 .details ul{
     list-style:none;
 }
 
 .details li{
+font-size:1.15rem;
+    line-height:2;
+    color:#3f523d;
     margin-bottom:15px;
 }
 
@@ -250,20 +644,8 @@ footer{
     color:#666;
 }
 
-@media(max-width:768px){
-
-.about{
-    grid-template-columns:1fr;
 }
 
-.nav-links{
-    display:none;
-}
-
-.hero h1{
-    font-size:3rem;
-}
-}
 </style>
 </head>
 
@@ -273,12 +655,15 @@ footer{
 
 <div class="nav-container">
 
-    <div class="nav-links">
-        <a href="#izdelek">Izdelek</a>
-        <a href="#prednosti">Prednosti</a>
-        <a href="#cena">Cena</a>
-        <a href="#kontakt">Kontakt</a>
+ <div class="nav-title">
+        SVET ZELENE
     </div>
+
+   <div class="nav-links">
+    <a href="#cena">Izdelek</a>
+    <a href="#faq">Pogosta vprašanja</a>
+    <a href="#kontakt">Kontakt</a>
+</div>
 
 </div>
 
@@ -298,64 +683,54 @@ footer{
 </div>
 </section>
 
-<section id="izdelek">
-<h2 class="section-title">Izdelek</h2>
+<section id="opis">
+<h2 class="section-title">IZDELEK</h2>
 
+<div class="logo">
+    <img src="logo.png" alt="Logo">
+</div>
 
 <div class="about">
 
 <div class="card">
-<h3>Svež</h3>
-<p>
-Sok stiskam dvakrat tedensko, ob torkih in petkih.
-Na ta način zagotovim kar največjo svežino in kakovost izdelka.
+<h3>SVEŽ</h3>
+<p class="green-text">
+Stiskan dvakrat tedensko.</br>
+Za garantirano svežino in kakovost izdelka.
 </p>
 </div>
 
 <div class="card">
-<h3>Premišljen</h3>
-<p>
-Izdelek lahko uživate brez skrbi da bi vase vnašali kemikalije, vse je premišljeno in brez rizike.
-</p>
-</div>
-
-
-<div class="card">
-<h3>Naraven</h3>
-<p>
-V sok ne dodajam ničesar razen zelene.
-Brez konzervansov, umetnih dodatkov ali dodanega sladkorja.
+<h3>PRISTEN</h3>
+<p class="green-text">
+Nepasteriziran in brez dodatkov; sladkorja, vode, konzervansov...
 </p>
 </div>
 
 <div class="card">
-<h3>Smiseln</h3>
-
-<p>
-Če se v kaj splača investirati je to zdravje, saj na koncu je edino to pomembno.
+<h3>ZDRAV</h3>
+<p class="green-text">
+Steklena embalaža brez mikroplastik in naravno čiščene steklenice.
 </p>
 </div>
 
-</section>
+<div class="card">
+<h3>SMISELN</h3>
 
-<div class="cloud-banner">
-    <p class="section-title">
-        ODLIČNA PRILOŽNOST ZA PONASTAVITEV<br> PREHRANJEVALNIH NAVAD
-IN ZAČETEK<br> POTI K BOLJŠEMU NAČINU ŽIVLJENJA.
-    </p>
-
-
+<p class="green-text">
+Najbolša investicija je investicija vase, saj je zdravje temelj vsega.
+</p>
 </div>
+
 </section>
 
 <section id="cena">
 
-<div class="product-logo">
-    <img src="logo.png" alt="Svet Zelene">
+<div class="cloud-banner">
+    <img src="font.png" alt="">
 </div>
 
-
-<div class="price">
+<div class="price" id="izdelek">
 
     <div class="price-image">
         <img src="cena.png">
@@ -363,15 +738,18 @@ IN ZAČETEK<br> POTI K BOLJŠEMU NAČINU ŽIVLJENJA.
 
     <div class="price-info">
         <h3>4,50 €</h3>
-        <p>0,5 L sveže stisnjenega soka zelene</p>
+        <p>za 0,5 L sveže hladno stisnjenega <br> soka zelene</p>
         <br>
-        <p>Po želji dodatek limone ali jabolka</p>
+        <p class="small-note">Po želji dodatek limone ali jabolka</p>
     </div>
+
+</div>
 
 </section>
 
-<section id="prednosti">
-<h2 class="section-title"></h2>
+<section id="podrobnosti" class="details">
+
+<h2 class="section-title">PODROBNOSTI</h2>
 
 <div class="features">
 
@@ -384,13 +762,13 @@ IN ZAČETEK<br> POTI K BOLJŠEMU NAČINU ŽIVLJENJA.
 <div class="feature">
 <span>🫙</span>
 <h3>Steklena embalaža</h3>
-<p>Manj odpadkov in možnost ponovne uporabe.</p>
+<p>Manj odpadkov in možnost<br> ponovne uporabe.</p>
 </div>
 
 <div class="feature">
 <span>🛵</span>
 <h3>Dostava</h3>
-<p>Dostava v okolici Ljubljane pri naročilih nad 20 €.</p>
+<p>Dostava v okolici Ljubljane<br> pri večjih naročilih brezplačna.</p>
 </div>
 
 <div class="feature">
@@ -401,36 +779,88 @@ IN ZAČETEK<br> POTI K BOLJŠEMU NAČINU ŽIVLJENJA.
 
 </div>
 
-</section>
-<section id="podrobnosti" class="details">
+<h3 class="mobile-title">
+    SVEŽE PRIPRAVLJENO VSAK PONEDELJEK IN ČETRTEK.
+</h3>
 
-<h2 class="section-title">Podrobnosti</h2>
-
-<div class="card">
-<ul>
-<li>✓ Rok uporabe približno 4 dni.</li>
-<li>✓ Kavcija za steklenico: 1,50 €.</li>
-<li>✓ Ob vračilu steklenice se kavcija povrne.</li>
-<li>✓ Steklenice čistim z vročo vodo in alkoholnim kisom.</li>
-<li>✓ Na voljo ob torkih in petkih.</li>
-</ul>
+<div class="mobile-sok">
+    <img src="sok.png" alt="Sok zelene">
 </div>
+
+<div class="details-content">
+
+    <div class="mobile-info">
+        <h3 class="desktop-title">
+            SVEŽE PRIPRAVLJENO VSAK PONEDELJEK IN ČETRTEK.
+        </h3>
+
+        <p>Sok ni pasteriziran, torej je njegov rok uporabe približno 4 dni.</p>
+    </div>
+
+    <div class="details-image">
+        <img src="sok.png" alt="Sok zelene">
+    </div>
+
+</div>
+
+</section>
+
+<section id="faq">
+
+<h2 class="section-title">Pogosta vprašanja</h2>
+
+
+<details class="faq-item">
+    <summary>Kdaj, koliko in kako naj pijem sok?</summary>
+    <p>Najbolje je sok piti zjutraj na prazen želodec, lahko pa ga zaužijete tudi kadarkoli čez dan. Pred pitjem naj od zadnjega obroka mine približno 30 minut, po pitju pa pred naslednjim obrokom prav tako počakajte 30 minut. Priporočena dnevna količina je približno 0,5 litra, če pa s pitjem šele začenjate, lahko začnete tudi z manjšo količino. Sok pijte počasi, v manjših požirkih, da telo lažje izkoristi njegove naravne učinkovine.</p>
+</details>
+
+<details class="faq-item">
+    <summary>Kaj pomeni hladno stiskano?</summary>
+    <p>Hladno stiskano pomeni, da se sadje in zelenjava stisneta brez segrevanja. Zaradi tega se ohrani več vitaminov, mineralov, encimov in drugih hranil, sok pa je kakovostnejši in bolj hranljiv.
+
+Pri običajnem stiskanju se zaradi hitrega vrtenja ustvari več toplote in oksidacije, kar lahko zmanjša vsebnost nekaterih občutljivih hranil ter skrajša svežino soka.
+</p>
+</details>
+
+<details class="faq-item">
+    <summary>Zakaj piti sok zelene?</summary>
+    <p>Sok zelene je bogat z vitamini (A, C, E, K...), minerali, kot so kalij, natrij in magnezij, ter antioksidanti. Mnogi ga uživajo zaradi njegovih protivnetnih lastnosti ter podpore prebavi, imunskemu sistemu, srcu in ožilju. Je preprost način, da v vsakdan vključite več koristnih hranil iz sveže zelenjave. </p>
+</p>
+</details>
+
+<details class="faq-item">
+    <summary>Kako je z dostavo?</summary>
+    <p>Dostava je znotraj in okolice Ljubljanske obvoznice brezplačna pri naročilih nad 20€. Drugače dostava 2€ in samo v okolici Ljubljane. </p>
+</details>
+
+<details class="faq-item">
+    <summary>Kako je s steklenicami?</summary>
+    <p>Steklenice so oprane z vročo vodo in kisom, kavcija na steklenico je 2€, po vračilu steklenice se povrne. </p>
+</details>
+
+<details class="faq-item">
+    <summary>Kako naročim?</summary>
+    <p>Za naročilo soka prosim pokličite na tel. št. 069 883 547 ali pošljite sporočilo.</p>
+</details>
+
+
 
 </section>
 
 <section id="kontakt">
 <h2 class="section-title">Kontakt</h2>
 
-<div class="card" style="text-align:center;">
-<p><strong>Ime in Priimek</strong></p>
-<p>Telefon: 041 XXX XXX</p>
-<p>Email: tvoj@email.com</p>
+<div class="feature" style="text-align:center;">
+<p><strong>Gal Zupančič</strong></p>
+<p>Telefon: 069 883 547</p>
+<p>Email: svetzelene.si@gmail.com</p>
 </div>
 
 </section>
 
 <footer>
-🌿 Šolski projekt – Sok Zelene
+Vse pravice pridržane
 </footer>
 
 </body>
