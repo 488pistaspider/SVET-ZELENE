@@ -207,9 +207,13 @@ font-family:'Autour One', cursive;
     font-size:1rem;
     font-weight:500;
     color:#ffffff;
+transition:.25s;
 }
 
-/* HERO */
+.nav-links a:hover{
+    color:#a8d5a2;
+}
+
 .hero{
     min-height:100vh;
     display:flex;
@@ -239,7 +243,7 @@ transform: translateY(-60px);
 }
 .hero h1{
     font-family: 'Ribeye', cursive;
-font-size:2.5rem;
+font-size:2.1rem;
     color:#ffffff;
     margin-bottom:1px;
     font-weight:700;
@@ -290,6 +294,21 @@ font-family: 'Autour One', cursive;
 #podrobnosti .section-title{
         margin-top:190px;
     }
+
+}
+
+.nav-container{
+        justify-content:flex-end;
+    }
+
+    .nav-links{
+        margin-left:auto;
+ gap:10px;
+    }
+
+.nav-links a{
+    font-size:0.82rem;
+}
 
 }
 
@@ -363,12 +382,12 @@ section{
 }
 
 .card{
-    background: #e9f0e9;
-   padding:25px 20px;
+    background:#e8eadb;
+    border:1px solid rgba(45,69,41,0.08);
     border-radius:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 text-align:center;
-
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+padding:25px 20px;
 }
 
 .card h3{
@@ -378,6 +397,10 @@ text-align:center;
     font-size:1.2rem;
     margin-bottom:20px;
 }
+
+.about{
+        grid-template-columns:1fr;
+    }
 
 .details-image{
     display:none;
@@ -504,10 +527,10 @@ section{
 }
 
 .card{
-    background: #e9f0e9;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+    background:#e8eadb;
+    border:1px solid rgba(45,69,41,0.08);
+    border-radius:22px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
 .card h3{
@@ -718,7 +741,7 @@ Steklena embalaža brez mikroplastik in naravno čiščene steklenice.
 <h3>SMISELN</h3>
 
 <p class="green-text">
-Najbolša investicija je investicija vase, saj je zdravje temelj vsega.
+Najboljša investicija je investicija vase, saj je zdravje temelj vsega.
 </p>
 </div>
 
@@ -841,7 +864,7 @@ Pri običajnem stiskanju se zaradi hitrega vrtenja ustvari več toplote in oksid
 
 <details class="faq-item">
     <summary>Kako naročim?</summary>
-    <p>Za naročilo soka prosim pokličite na tel. št. 069 883 547 ali pošljite sporočilo.</p>
+    <p>Za naročilo soka prosim pokličite ali pošljite sporočilo na tel. št. 069 883 547, da se dogovorimo o terminu.</p>
 </details>
 
 
@@ -860,7 +883,7 @@ Pri običajnem stiskanju se zaradi hitrega vrtenja ustvari več toplote in oksid
 </section>
 
 <footer>
-Vse pravice pridržane
+© 2026 Svet Zelene
 </footer>
 
 </body>
