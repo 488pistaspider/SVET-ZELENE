@@ -92,13 +92,14 @@ margin-top:115px;
 
 #faq{
     background:#1f3a1f;
-    padding:90px 40px;
+    padding:70px 30px;
     border-radius:35px;
     margin:100px auto;
 }
 
 #faq .section-title{
     color:white;
+font-size:1.8rem;
 }
 
 .faq-item{
@@ -125,15 +126,6 @@ margin-top:115px;
     display:none;
 }
 
-.faq-item summary::after{
-    content:"+";
-    float:right;
-    font-size:1.6rem;
-}
-
-.faq-item[open] summary::after{
-    content:"−";
-}
 
 #Opis .section-title{
     margin-top:70px;
@@ -305,6 +297,17 @@ font-family: 'Autour One', cursive;
         margin-left:auto;
  gap:10px;
     }
+
+.faq-item summary::after{
+    content:"+";
+    float:right;
+    font-size:1.6rem;
+}
+
+.faq-item[open] summary::after{
+    content:"−";
+}
+
 
 .nav-links a{
     font-size:0.82rem;
@@ -669,6 +672,14 @@ footer{
 
 }
 
+@media (max-width:768px){
+
+    .faq-item summary::after{
+        display:none;
+    }
+
+}
+
 </style>
 </head>
 
@@ -835,7 +846,7 @@ Najboljša investicija je investicija vase, saj je zdravje temelj vsega.
 
 <details class="faq-item">
     <summary>Kdaj, koliko in kako naj pijem sok?</summary>
-    <p>Najbolje je sok piti zjutraj na prazen želodec, lahko pa ga zaužijete tudi kadarkoli čez dan. Pred pitjem naj od zadnjega obroka mine približno 30 minut, po pitju pa pred naslednjim obrokom prav tako počakajte 30 minut. Priporočena dnevna količina je približno 0,5 litra, če pa s pitjem šele začenjate, lahko začnete tudi z manjšo količino. Sok pijte počasi, v manjših požirkih, da telo lažje izkoristi njegove naravne učinkovine.</p>
+    <p>Pred pitjem naj od zadnjega obroka mine približno 30 minut, po pitju pa pred naslednjim obrokom prav tako počakajte 30 minut. Priporočena dnevna količina je približno 0,5 litra, če pa s pitjem šele začenjate, lahko začnete tudi z manjšo količino. Sok pijte počasi, v manjših požirkih, da telo lažje izkoristi njegove naravne učinkovine.</p>
 </details>
 
 <details class="faq-item">
