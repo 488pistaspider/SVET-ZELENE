@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://488pistaspider.github.io/SVET-ZELENE/sitemap.xml
